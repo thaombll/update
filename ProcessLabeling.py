@@ -482,7 +482,7 @@ if __name__ == "__main__":
                     unlabeled_path="/home/tranthanhthao/update/agnews_origin_embedding.csv", 
                     # keyword_embedding_path = '/home/tranthanhthao/DALAB/click_bait/Keyword_embedding.csv',                    labels=['yes', 'no'],
                     task_domain="Agnews detection",
-                    labels=[0, 1, 2,3]
+                    labels=[0, 1, 2,3],
                     feature_columns=features, 
                     label_columns="label", 
                     dataset_name="Agnews",
