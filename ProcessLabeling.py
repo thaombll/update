@@ -10,9 +10,9 @@ from sklearn.cluster import KMeans
 import re
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-part1 = pd.read_csv('/home/tranthanhthao/data/1.csv')
-part2 = pd.read_csv('/home/tranthanhthao/data/2.csv')
-part3 = pd.read_csv('/home/tranthanhthao/data/3.csv')
+part1 = pd.read_csv('/home/tranthanhthao/update/1.csv')
+part2 = pd.read_csv('/home/tranthanhthao/update/2.csv')
+part3 = pd.read_csv('/home/tranthanhthao/update/3.csv')
 class MLPModel(nn.Module):
     def __init__(self, input_size, hidden_size1, num_classes):
         super(MLPModel, self).__init__()
@@ -479,7 +479,7 @@ if __name__ == "__main__":
     for i in range(768):
         features.append(str(i))
     labeling = Labeling(labeled_path=None, 
-                    unlabeled_path="/home/tranthanhthao/data/agnews_origin_embedding.csv", 
+                    unlabeled_path="/home/tranthanhthao/update/agnews_origin_embedding.csv", 
                     # keyword_embedding_path = '/home/tranthanhthao/DALAB/click_bait/Keyword_embedding.csv',                    labels=['yes', 'no'],
                     task_domain="Agnews detection",
                     labels=[0, 1, 2,3]
