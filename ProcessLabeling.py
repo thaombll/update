@@ -12,6 +12,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 part1 = pd.read_csv('/home/tranthanhthao/update/1.csv')
 part2 = pd.read_csv('/home/tranthanhthao/update/2.csv')
 part3 = pd.read_csv('/home/tranthanhthao/update/3.csv')
+pd.concat([part1, part2, part3],ignore_index=True).to_csv('agnews_explain_embedding.csv', index = False)
 class MLPModel(nn.Module):
     def __init__(self, input_size, hidden_size1, num_classes):
         super(MLPModel, self).__init__()
@@ -486,6 +487,6 @@ if __name__ == "__main__":
                     dataset_name="Agnews",
                     cost=100, confidence_threshold=0.05,
                     num_init=150,
-                    keyword_embedding_path = pd.concat([part1, part2, part3],ignore_index=True),
+                    keyword_embedding_path ="/home/tranthanhthao/update/agnews_explain_embedding.csv",
                     )
     labeling.process()
