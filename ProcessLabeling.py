@@ -11,7 +11,7 @@ import re
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 part1 = pd.read_csv('/home/tranthanhthao/update/1.csv')
 part2 = pd.read_csv('/home/tranthanhthao/update/2.csv')
-part3 = pd.read_csv('/home/tranthanhthao/update/3.csv')
+part6 = pd.read_csv('/home/tranthanhthao/update/3.csv')
 pd.concat([part1, part2, part3],ignore_index=True).to_csv('agnews_explain_embedding.csv', index = False)
 class MLPModel(nn.Module):
     def __init__(self, input_size, hidden_size1, num_classes):
