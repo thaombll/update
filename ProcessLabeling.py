@@ -53,7 +53,7 @@ def train_model(train_loader, model, criterion, optimizer, epochs):
             optimizer.step()
 
             running_loss += loss.item()
-        # print(f"Epoch {epoch+1}/{epochs}, Loss: {running_loss / len(train_loader)}")
+        # pri(train_loader)}")
     return model
 
 def test_model(model, test_loader):
